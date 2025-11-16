@@ -33,9 +33,6 @@ This demonstrates the potential of quantum optimization for financial decision-m
 
 Portfolio selection can be framed as a **Quadratic Unconstrained Binary Optimization (QUBO)** problem:
 
-[
-\min_x ; \lambda , x^T \Sigma x - (1-\lambda) , \mu^T x
-]
 
 Mapping this to an **Ising Hamiltonian** allows quantum algorithms to search the solution landscape using energy minimization.
 
@@ -161,11 +158,7 @@ Weights are modeled using binary variables:
 * `x_i = 0` → exclude asset i
 * final weights = normalized selected assets
 
-Budget constraint:
-
-[
-\((\sum_{i=1}^{n} x_i - B)^2\)
-]
+Budget Constraints
 
 added as a penalty to enforce selection of exactly B assets.
 
